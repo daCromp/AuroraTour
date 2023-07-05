@@ -424,10 +424,10 @@
   }
 
   .bilder {
-      width: 300px;
-      height: 300px;
-      display: none;
-  }
+    width: 250px;
+    height: 330px;
+    display: none;
+}
     </style>
     <div class="slideIn">
     <div style="background-color: #6D23E7; border-radius: 5px; width: 900px; height: 500px;">
@@ -437,25 +437,25 @@
       <div class="container">
       <div class="inner-div">
           <div class="slider">
-              <div class="slider-container">
-                  <img class="bilder" src="bilder/Bild1.jpg" alt="Bild 1">
-                  <img class="bilder" src="bilder/Bild2.jpg" alt="Bild 2">
-                  <img class="bilder" src="bilder/Bild3.jpg" alt="Bild 3">
-                  <img class="bilder" src="bilder/Bild4.jpg" alt="Bild 4">
-                  <img class="bilder" src="bilder/Bild5.jpg" alt="Bild 5">
-                  <img class="bilder" src="bilder/Bild6.jpg" alt="Bild 6" style="display: block;">
-                  <img class="bilder" src="bilder/Bild7.jpg" alt="Bild 7">
-                  <img class="bilder" src="bilder/Bild8.jpg" alt="Bild 8">
-                  <img class="bilder" src="bilder/Bild9.jpg" alt="Bild 9">
-                  <img class="bilder" src="bilder/Bild10.jpg" alt="Bild 10">
-                  <img class="bilder" src="bilder/Bild11.jpg" alt="Bild 11">
+              <div class="slider-container-">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/1.jpg" alt="Bild 1">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/2.jpg" alt="Bild 2">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/3.jpg" alt="Bild 3">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/4.jpg" alt="Bild 4">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/5.jpg" alt="Bild 5">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/6.jpg" alt="Bild 6" style="display: block;">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/7.jpg" alt="Bild 7">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/8.jpg" alt="Bild 8">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/9.jpg" alt="Bild 9">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/10.jpg" alt="Bild 10">
+                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/11.jpg" alt="Bild 11">
               </div>
           </div>
       </div>
       <div class="inner-div">
           <div class="volume-slider" style="margin-top: 10px;">
               <input style="background-color: #e4e4e4; border-radius: 10px;" type="range" min="1" max="11" value="6"
-                  step="1" oninput="changePic(this.value)">
+                  step="1" oninput="changePic${hotspot.folder}(this.value)">
           </div>
       </div>
   </div>
@@ -470,18 +470,59 @@
     </div>
     </div>
     <script>
-    var images = document.querySelectorAll('.slider img');
 
-    function changePic(value) {
-      var index = parseInt(value) - 1;
-      for (var i = 0; i < images.length; i++) {
-        if (i === index) {
-          images[i].style.display = 'block';
-        } else {
-          images[i].style.display = 'none';
-        }
-      }
+    var imagesWhale = document.querySelectorAll('.bilder[id="whale"]');
+    var imagesPony = document.querySelectorAll('.bilder[id="pony"]');
+    var imagesBub = document.querySelectorAll('.bilder[id="steinBub"]');
+    var imagesGirl = document.querySelectorAll('.bilder[id="steinGirl"]');
+
+function changePicwhale(value) {
+  var index = parseInt(value) - 1;
+  console.log(value)
+  imagesWhale.forEach((image, i) => {
+    if (i === index) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
     }
+  });
+}
+
+function changePicpony(value) {
+  var index = parseInt(value) - 1;
+  console.log(value)
+  imagesPony.forEach((image, i) => {
+    if (i === index) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
+  });
+}
+
+function changePicsteinBub(value) {
+  var index = parseInt(value) - 1;
+  console.log(value)
+  imagesBub.forEach((image, i) => {
+    if (i === index) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
+  });
+}
+
+function changePicsteinGirl(value) {
+  var index = parseInt(value) - 1;
+  console.log(value)
+  imagesGirl.forEach((image, i) => {
+    if (i === index) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
+  });
+}
     </script>`;
 
     setInnerHTML(infobox, html);
@@ -506,6 +547,7 @@
     function toggle() {
       var temp = infobox.style.display;
       var temp = infobox.style.display;
+      
       if (temp === 'block') {
         infobox.classList.add('slideOut');
         infobox.classList.remove('slideIn');
