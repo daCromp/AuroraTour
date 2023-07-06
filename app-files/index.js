@@ -367,163 +367,186 @@
     var html = `
     <style>
     .volume-slider {
-      width: 200px;
-      height: 6px;
-      position: relative;
-      border-radius: 10px;
-  }
+        width: 200px;
+        height: 6px;
+        position: relative;
+        border-radius: 10px;
+    }
 
-  .volume-slider input[type="range"] {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      outline: none;
-  }
+    .volume-slider input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        outline: none;
+    }
 
-  .volume-slider input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 15px;
-      height: 15px;
-      background-color: #333;
-      cursor: pointer;
-      border-radius: 10px;
+    .volume-slider input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background-color: #FAFF00;
+        cursor: pointer;
+        border-radius: 10px;
 
-  }
+    }
 
-  .volume-slider input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      background-color: #333;
-      cursor: pointer;
-  }
+    .volume-slider input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background-color: #333;
+        cursor: pointer;
+    }
 
-  .slider {
-      overflow: hidden;
-      position: relative;
-  }
+    .slider {
+        overflow: hidden;
+        position: relative;
+    }
 
-  .slider-container {
-      display: flex;
-      width: fit-content;
-      transition: transform 0.3s ease;
-  }
+    .slider-container {
+        display: flex;
+        width: fit-content;
+        transition: transform 0.3s ease;
+    }
 
-  .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 200px;
-      flex-direction: column;
-  }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        flex-direction: column;
+    }
 
-  .inner-div {
-      text-align: center;
-  }
+    .inner-div {
+        text-align: center;
+    }
 
-  .bilder {
-    width: 250px;
-    height: 330px;
-    display: none;
-}
-    </style>
-    <div class="slideIn">
+    .bilder {
+        width: 250px;
+        height: 330px;
+        display: none;
+        border-radius: 5px;
+    }
+
+    .whale {
+        width: 330px;
+        height: 250px;
+        display: none;
+        border-radius: 5px;
+    }
+</style>
+<div class="slideIn">
     <div style="background-color: #6D23E7; border-radius: 5px; width: 900px; height: 500px;">
-    <img style="width: 45px; float: right; cursor: pointer" src="./img/closeYellow.png" id="${hotspot.name}">
-    <div style="display: flex; color: white;">
-      <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-      <div class="container">
-      <div class="inner-div">
-          <div class="slider">
-              <div class="slider-container-">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/1.jpg" alt="Bild 1">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/2.jpg" alt="Bild 2">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/3.jpg" alt="Bild 3">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/4.jpg" alt="Bild 4">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/5.jpg" alt="Bild 5">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/6.jpg" alt="Bild 6" style="display: block;">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/7.jpg" alt="Bild 7">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/8.jpg" alt="Bild 8">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/9.jpg" alt="Bild 9">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/10.jpg" alt="Bild 10">
-                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/11.jpg" alt="Bild 11">
-              </div>
-          </div>
-      </div>
-      <div class="inner-div">
-          <div class="volume-slider" style="margin-top: 10px;">
-              <input style="background-color: #e4e4e4; border-radius: 10px;" type="range" min="1" max="11" value="6"
-                  step="1" oninput="changePic${hotspot.folder}(this.value)">
-          </div>
-      </div>
-  </div>
-      </div>
-      <div style="flex: 1; padding-left: 20px; padding-top: 100px;">
-        <p style="font-size: 40px; font-weight: bold;">${hotspot.name}</p>
-        <p style="font-size: 25px; font-style: italic; padding-top: 15px;">${hotspot.artist}</p>
-        <p style="font-size: 20px; padding-top: 30px; width: 450px;">${hotspot.disc}</p>
-        <a href="${hotspot.link}" target="_blank" style="margin-left: 90px; display: inline-block; padding: 12px 40px; border-radius: 30px; background-color: #FAFF00; color: #fff; font-size: 18px; color: black; text-decoration: none; text-align: center; cursor: pointer; margin-top: 40px;">Mehr Infromationen</a>
-      </div>
+        <img style="width: 45px; float: right; cursor: pointer" src="./img/closeYellow.png" id="${hotspot.name}">
+        <div style="display: flex; color: white;">
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center; margin-top: 75px;">
+                <div class="container">
+                    <div class="inner-div">
+                        <div class="slider">
+                            <div class="slider-container-">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/1.jpg"
+                                    alt="Bild 1">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/2.jpg"
+                                    alt="Bild 2">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/3.jpg"
+                                    alt="Bild 3">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/4.jpg"
+                                    alt="Bild 4">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/5.jpg"
+                                    alt="Bild 5">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/6.jpg"
+                                    alt="Bild 6" style="display: block;">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/7.jpg"
+                                    alt="Bild 7">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/8.jpg"
+                                    alt="Bild 8">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/9.jpg"
+                                    alt="Bild 9">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/10.jpg"
+                                    alt="Bild 10">
+                                <img class="bilder" id="${hotspot.folder}" src="bilder/${hotspot.folder}/11.jpg"
+                                    alt="Bild 11">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-div">
+                        <div class="volume-slider" style="margin-top: 10px;">
+                            <input style="background-color: #380e7d; border-radius: 10px;" type="range" min="1" max="11"
+                                value="6" step="1" oninput="changePic${hotspot.folder}(this.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1; padding-left: 20px; padding-top: 100px;">
+                <p style="font-size: 40px; font-weight: bold;">${hotspot.name}</p>
+                <p style="font-size: 25px; font-style: italic; padding-top: 15px;">${hotspot.artist}</p>
+                <p style="font-size: 20px; padding-top: 30px; width: 450px;">${hotspot.disc}</p>
+                <a href="${hotspot.link}" target="_blank"
+                    style="margin-left: 90px; display: inline-block; padding: 12px 40px; border-radius: 30px; background-color: #FAFF00; color: #fff; font-size: 18px; color: black; text-decoration: none; text-align: center; cursor: pointer; margin-top: 40px;">Mehr
+                    Infromationen</a>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    <script>
+</div>
+<script>
 
     var imagesWhale = document.querySelectorAll('.bilder[id="whale"]');
     var imagesPony = document.querySelectorAll('.bilder[id="pony"]');
     var imagesBub = document.querySelectorAll('.bilder[id="steinBub"]');
     var imagesGirl = document.querySelectorAll('.bilder[id="steinGirl"]');
 
-function changePicwhale(value) {
-  var index = parseInt(value) - 1;
-  console.log(value)
-  imagesWhale.forEach((image, i) => {
-    if (i === index) {
-      image.style.display = 'block';
-    } else {
-      image.style.display = 'none';
-    }
-  });
-}
+    imagesWhale.forEach(image => {
+        image.classList.remove("bilder");
+        image.classList.add("whale");
+    });
 
-function changePicpony(value) {
-  var index = parseInt(value) - 1;
-  console.log(value)
-  imagesPony.forEach((image, i) => {
-    if (i === index) {
-      image.style.display = 'block';
-    } else {
-      image.style.display = 'none';
+    function changePicwhale(value) {
+        var index = parseInt(value) - 1;
+        imagesWhale.forEach((image, i) => {
+            if (i === index) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
     }
-  });
-}
 
-function changePicsteinBub(value) {
-  var index = parseInt(value) - 1;
-  console.log(value)
-  imagesBub.forEach((image, i) => {
-    if (i === index) {
-      image.style.display = 'block';
-    } else {
-      image.style.display = 'none';
+    function changePicpony(value) {
+        var index = parseInt(value) - 1;
+        imagesPony.forEach((image, i) => {
+            if (i === index) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
     }
-  });
-}
 
-function changePicsteinGirl(value) {
-  var index = parseInt(value) - 1;
-  console.log(value)
-  imagesGirl.forEach((image, i) => {
-    if (i === index) {
-      image.style.display = 'block';
-    } else {
-      image.style.display = 'none';
+    function changePicsteinBub(value) {
+        var index = parseInt(value) - 1;
+        imagesBub.forEach((image, i) => {
+            if (i === index) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
     }
-  });
-}
-    </script>`;
+
+    function changePicsteinGirl(value) {
+        var index = parseInt(value) - 1;
+        imagesGirl.forEach((image, i) => {
+            if (i === index) {
+                image.style.display = 'block';
+            } else {
+                image.style.display = 'none';
+            }
+        });
+    }
+</script>
+   `;
 
     setInnerHTML(infobox, html);
 
@@ -547,7 +570,7 @@ function changePicsteinGirl(value) {
     function toggle() {
       var temp = infobox.style.display;
       var temp = infobox.style.display;
-      
+
       if (temp === 'block') {
         infobox.classList.add('slideOut');
         infobox.classList.remove('slideIn');

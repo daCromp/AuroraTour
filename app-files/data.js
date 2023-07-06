@@ -36,9 +36,9 @@ var APP_DATA = {
           "title": "",
           "text": "Text",
           "folder": 'steinGirl',
-          "name": 'Stein Girl',
-          "artist": 'Yung Hurn',
-          "disc": 'Das Gemälde "First Steps of Change" ist ein eindringliches Kunstwerk, das den Beginn einer Veränderung oder Transformation darstellt. Es fängt den Moment ein, in dem jemand den Mut findet, einen neuen Weg einzuschlagen und den ersten Schritt in Richtung einer positiven Veränderung zu machen.',
+          "name": 'Nayara',
+          "artist": 'Emily Roberts',
+          "disc": 'Nayara ist eine beeindruckende Skulptur, die eine antike Königin darstellt. Inmitten ihrer majestätischen Ausstrahlung erweckt sie die Eleganz und Macht vergangener Zeiten zum Leben. Die Statue zeigt Nayara in einer königlichen Pose, mit erhobenem Kopf und einem Ausdruck starker Entschlossenheit auf ihrem Gesicht.',
           "link": 'https://imaginum.netlify.app/kunstwerk/6481009174fea704cba4289e'
         },
         {
@@ -47,9 +47,9 @@ var APP_DATA = {
           "title": "",
           "text": "Text",
           "folder": 'pony',
-          "name": 'Pony',
-          "artist": 'Olivier Keros',
-          "disc": 'Das Gemälde "First Steps of Change" ist ein eindringliches Kunstwerk, das den Beginn einer Veränderung oder Transformation darstellt. Es fängt den Moment ein, in dem jemand den Mut findet, einen neuen Weg einzuschlagen und den ersten Schritt in Richtung einer positiven Veränderung zu machen.',
+          "name": 'Copper Horse',
+          "artist": 'Michael Wilson',
+          "disc": 'Die Skulptur "Copper Horse" ist eine beeindruckende Darstellung eines majestätischen Pferdes. Die Skulptur besteht aus Kupfer und verströmt eine kraftvolle Aura, die den Betrachter in ihren Bann zieht. Das Pferd steht in einer dynamischen Position, mit erhobenem Kopf und aufgewecktem Blick, als ob es jederzeit zum Leben erwachen könnte.',
           "link": 'https://imaginum.netlify.app/kunstwerk/6481009174fea704cba4289e'
         },
         {
@@ -58,9 +58,9 @@ var APP_DATA = {
           "title": "",
           "text": "Text",
           "folder": 'steinBub',
-          "name": 'Stein Bub',
-          "artist": 'Olivier Keros',
-          "disc": 'Das Gemälde "First Steps of Change" ist ein eindringliches Kunstwerk, das den Beginn einer Veränderung oder Transformation darstellt. Es fängt den Moment ein, in dem jemand den Mut findet, einen neuen Weg einzuschlagen und den ersten Schritt in Richtung einer positiven Veränderung zu machen.',
+          "name": 'Der Träger',
+          "artist": 'Emma Clarke',
+          "disc": 'Die Skulptur "Der Träger" ist eine faszinierende Darstellung einer menschlichen Figur, die eine schwere Last auf ihren Schultern trägt. Die Skulptur verkörpert die Themen Stärke, Ausdauer und Opferbereitschaft. Die Figur steht aufrecht, mit leicht gebeugten Knien und einem starken, entschlossenen Blick.',
           "link": 'https://imaginum.netlify.app/kunstwerk/6481009174fea704cba4289e'
         },
         {
@@ -69,9 +69,9 @@ var APP_DATA = {
           "title": "",
           "text": "Text",
           "folder": 'whale',
-          "name": 'whale',
-          "artist": 'Olivier Keros',
-          "disc": 'Das Gemälde "First Steps of Change" ist ein eindringliches Kunstwerk, das den Beginn einer Veränderung oder Transformation darstellt. Es fängt den Moment ein, in dem jemand den Mut findet, einen neuen Weg einzuschlagen und den ersten Schritt in Richtung einer positiven Veränderung zu machen.',
+          "name": 'Blauwal',
+          "artist": 'Julia Anderson',
+          "disc": 'Die Skulptur "Blauwal" ist eine atemberaubende Darstellung des größten Lebewesens der Erde, das aus gläsernen Materialien gefertigt ist. Die elegante Form des Blauwals wird in transparentem blauen Glas dargestellt, das an die Schönheit und Anmut dieser faszinierenden Kreatur erinnert.',
           "link": 'https://imaginum.netlify.app/kunstwerk/6481009174fea704cba4289e'
         }
       ]
