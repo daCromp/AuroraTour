@@ -484,7 +484,7 @@
                 <p style="font-size: 25px; font-style: italic; padding-top: 15px;">${hotspot.artist}</p>
                 <p style="font-size: 20px; padding-top: 30px; width: 450px;">${hotspot.disc}</p>
                 <a href="${hotspot.link}" target="_blank"
-                    style="margin-left: 90px; display: inline-block; padding: 12px 40px; border-radius: 30px; background-color: #FAFF00; color: #fff; font-size: 18px; color: black; text-decoration: none; text-align: center; cursor: pointer; margin-top: 40px;">Mehr
+                    style="margin-left: 90px; display: inline-block; padding: 12px 40px; background-color: #FAFF00; color: #fff; font-size: 18px; color: black; text-decoration: none; text-align: center; cursor: pointer; margin-top: 40px;">Mehr
                     Informationen</a>
             </div>
         </div>
